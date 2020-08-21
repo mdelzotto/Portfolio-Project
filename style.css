@@ -51,15 +51,22 @@ nav a {
     transition: all 0.4s ease;
   }
   
-  nav a:hover {
+nav a:hover {
     letter-spacing: 3px;
     color: #cad2df;
     transition: all 0.4s ease;
   }
   
-  #main {
+#main {
     padding: 30px;
   }
+
+button {
+    float: right;
+    width: 100px;
+    height: 40px;
+    font-size: larger;
+}
 
 
 
