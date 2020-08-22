@@ -68,5 +68,8 @@ button {
     font-size: larger;
 }
 
+h1 a {
+    text-decoration: none;
+}
 
 
