@@ -25,7 +25,9 @@
         <h1 id="title"><a href="index.html">Real Estate Reservations</a></h1>
         <h2 id="tagline">Confirmed Reservations</h2>
       </div>
-      <button>Reserve</button>
+      <div class="col-md-4 col-xl-2 mt-4">
+        <a role="button" class="btn btn btn-info" id="reserveButton" >Reserve Campsite</a>
+      </div>
     </div>
 
     <nav>
@@ -34,6 +36,59 @@
       <a href="calendar.html">Calendar</a>
       <a href="aboutus.html">About Us</a>
     </nav>
+    <div id="reserveModal" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title">Reserve a Campsite</h3>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+              <div class="container-fluid">
+                <form id="reserveForm">
+                  <div class="row form-group">
+                      <label for="numCampers" class="col-sm-6 col-form-label">Number of Campers</label>
+                    <div class="col">
+                      <select class="form-control" name="numCampers" id="numCampers">
+                        <option value="1">1</option>
+                        <option value="1">2</option>
+                        <option value="1">3</option>
+                        <option value="1">4</option>
+                        <option value="1">5</option>
+                        <option value="1">6</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row form-group">
+                    <label class="col-sm-6 col-form-label" for="date">Date</label>
+                    <div class="col">
+                      <input class="form-control" id="date" name="date" type="date" />
+                    </div>
+                  </div>
+                  <div class="row form-group">
+                    <label class="col-sm-6 col-form-label">Campsite Type</label>
+                    <div class="btn-group btn-group-toggle ml-3" data-toggle="buttons">
+                      <label class="btn btn-success active">
+                        <input type="radio" name="siteType" id="siteTent" value="tent"> Tent
+                      </label>
+                      <label class="btn btn-primary">
+                        <input type="radio" name="siteType" id="siteRV" value="RV"> RV
+                      </label>
+                    </div>
+                  </div>
+    ​
+                  <div class="row form-group">
+                    <div class="col">
+                      <button type="button" class="btn btn-secondary ml-auto" data-dismiss="modal">Cancel</button>
+                      <button class="btn btn-primary" type="submit">Search</button>
+                    </div>
+                  </div>
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div id="carousel"></div>
     <div id="main">
       <h1>Content</h1>
@@ -148,7 +203,7 @@
             <a
               role="button"
               class="btn btn-link"
-              href="mailto:campsites@nucamp.co"
+              href="mailto:realestatereservations@re.com"
             >
               <i class="fa fa-envelope fa-lg text-primary"> </i>
               campsites@nucamp.co</a
@@ -157,5 +212,14 @@
         </div>
       </div>
     </footer>
+    
+<!-- JQuery must come first, then Popper.js, then Bootstrap Javascript plugins. -->
+  <!-- build:js js/main.js -->
+  <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+  <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+  <!-- endbuild -->
+
   </body>
 </html>
